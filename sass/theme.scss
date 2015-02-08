@@ -1,0 +1,39 @@
+/*!////////////////////////////////////////////////
+// THEME
+/////////////////////////////////////////////////*/
+$font-size: 16px;
+@function em($px, $base: $base-font-size){
+	@return ($px / $base) * 1em;
+}
+
+$highlight: #cc47ab;
+$secondaryColor: #737373;
+
+$headline: "franklin-gothic-urw",sans-serif;
+$body: "minion-pro",serif;
+$logo: "kepler-std-semicondensed", serif;
+
+h1,h2{
+	font-family: $headline;
+	font-size: 700;
+}
+h3,h4{
+	font-family: $body;
+}
+p{
+	font-family: $body;
+	font-size: em(20px,$font-size);
+	line-height: 1.6em;
+}
+
+.button{
+	display: inline-block;
+	background-color: #252525;
+	font-family: $headline;
+	font-size: em(16px,$font-size);
+	letter-spacing: 0.2em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 30px;
+}

@@ -1,0 +1,232 @@
+@import "resets.scss";
+@import "mixins.scss";
+@import "layout.scss";
+@import "theme.scss";
+
+/*!////////////////////////////////////////////////
+// MODULES
+/////////////////////////////////////////////////*/
+header[role=banner]{
+	width: 100%;
+	height: 223px;
+	position: relative;
+	padding: 45px 0 0;
+}
+.search{
+	position: absolute;
+	top: 10px;
+	right: 5%;
+	a{
+		font-family: $headline;
+		font-size: em(14px,$font-size);
+		letter-spacing: 0.2em;
+		color: #252525;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+nav[role=navigation]{
+	width: 100%;
+	background-color: #252525;
+	text-align: center;
+	padding: 25px 0;
+	z-index: 3;
+	a{
+		display: inline-block;
+		position: relative;
+		font-family: $headline;
+		font-size: em(16px,$font-size);
+		font-weight: 700;
+		letter-spacing: 0.2em;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin: 0 15px;
+		@include prefix(transition, 0.2s ease-in-out);
+		&:hover,
+		&:focus{
+			color: $secondaryColor;
+		}
+	}
+	a:after{
+		content:'';
+		height: 100%;
+		position: absolute;
+		right: -16px;
+		border-right: 1px solid #515151;
+	}
+	a:last-child:after{
+		content: '';
+		border-right: 0;
+	}
+}
+.selected{
+	border-bottom: 3px solid $highlight;
+}
+.branding{
+	text-align: center;
+	margin-bottom: 40px;
+	h2{
+		font-family: $logo;
+		font-size: em(38px,$font-size);
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		line-height: 1.0em;
+		text-transform: uppercase;
+	}
+	p{
+		font-family: "proxima-nova",sans-serif;
+		font-size: em(16px,$font-size);
+		font-weight: 400;
+		letter-spacing: 0.55em;
+		color: #ccc;
+		text-transform: uppercase;
+	}
+}
+.hero{
+
+	height: auto;
+	overflow: hidden;
+	h1{
+		font-family: $body;
+		font-weight: 700;
+		font-style: italic;
+	}
+	@media screen and (max-width: 1180px){
+		position: relative;
+	}
+}
+.hero__slider{
+	img{
+		width: 100%;
+	}
+}
+.hero__title{
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	z-index: 2;
+	div{
+		background-color: #fff;
+		padding: 20px 30px;
+	}
+	p{
+		font-family: $headline;
+		font-size: em(16px,$font-size);
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		line-height: 1.0em;
+		text-transform: uppercase;
+	}
+	h1{
+		font-size: em(60px,$font-size);
+		font-weight: 400;
+		line-height: 1.0em;
+	}
+	@media screen and (min-width: 1230px){
+		bottom: 5%;
+	}
+}
+.brief-bio{
+	padding: 100px 5%;
+}
+.brief-bio__jobs{
+	width: 100%;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	p{
+		font-family: $headline;
+		font-size: em(22px,$font-size);
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		display: inline-block;
+		&:after{
+			content: ', ';
+		}
+		&:last-child:after{
+			content: '';
+		}
+		@media screen and (min-width: 1180px){
+			font-size: em(28px,$font-size);
+			display: block;
+			&:after{
+				display: none;
+			}
+		}
+		@media screen and (min-width: 1340px){
+			font-size: em(32px,$font-size);
+		}
+	}
+	@media screen and (min-width: 1180px){
+		width: 33.333333%;
+		text-align: right;
+	}
+}
+.brief-bio__description{
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	@media screen and (min-width: 1180px){
+		width: 66.666666%;
+		padding: 0 2.5%;
+	}
+}
+.clients--home{
+	position: relative;
+	background-image: url(../img/client-bg.jpg);
+	background-size: cover;
+	min-height: 600px;
+	padding: 0 10%;
+}
+.clients__list{
+	position: relative;
+	top: 300px;
+	width: 90%;
+	background-color: $secondaryColor;
+	margin: 0 auto 0;
+	padding: 35px 30px;
+	h3,p{
+		color: #fff;
+	}
+	h3{
+		font-style: italic;
+		font-size: em(22px,$font-size);
+		margin-bottom: 5px;
+	}
+	b{
+		font-family: $headline;
+		font-size: em(18px,$font-size);
+		font-weight: 700;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+}
+footer[role=contentinfo]{
+	padding: 40px 5%;
+	font-family: $headline;
+	font-size: em(16px,$font-size);
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+.copyright{
+	float: left;
+}
+.search-links{
+	float: right;
+	a{
+		color: #252525;
+		text-decoration: none;
+	}
+}
+
+
+/*!////////////////////////////////////////////////
+// STATES
+/////////////////////////////////////////////////*/
+
+
+
+@import "shame.scss";
+@import "helpers.scss";
