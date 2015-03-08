@@ -184,6 +184,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/img\/page-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 168414,
+		"inputAbbreviatedPath": "\/img\/page-bg.jpg",
+		"outputAbbreviatedPath": "\/img\/page-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/personal-styling.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 166933,
+		"inputAbbreviatedPath": "\/img\/personal-styling.jpg",
+		"outputAbbreviatedPath": "\/img\/personal-styling.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/personal-styling2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 107479,
+		"inputAbbreviatedPath": "\/img\/personal-styling2.jpg",
+		"outputAbbreviatedPath": "\/img\/personal-styling2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
