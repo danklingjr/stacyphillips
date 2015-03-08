@@ -371,14 +371,26 @@ h1, h2 {
   font-size: 700; }
 
 h3, h4 {
-  font-family: "minion-pro", serif; }
+  font-family: "minion-pro", serif;
+  font-size: 1.25em; }
 
-p {
+p,
+li,
+blockquote {
   font-family: "minion-pro", serif;
   font-size: 1.25em;
   line-height: 1.6em; }
 
+ul {
+  margin-left: 25px; }
+
+blockquote {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.2em; }
+
 .button {
+  position: relative;
   display: inline-block;
   background-color: #252525;
   font-family: "franklin-gothic-urw", sans-serif;
@@ -387,7 +399,24 @@ p {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 30px; }
+  padding: 15px 30px;
+  border: 3px solid #252525;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
+  .button:hover, .button:focus {
+    background-color: #fff;
+    color: #252525; }
+
+.content {
+  padding: 100px 10%; }
+  .content h2 {
+    font-size: 2em;
+    letter-spacing: 0.25em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
 
 /*!////////////////////////////////////////////////
 // MODULES
@@ -396,7 +425,8 @@ header[role=banner] {
   width: 100%;
   height: 223px;
   position: relative;
-  padding: 45px 0 0; }
+  padding: 45px 0 0;
+  z-index: 4; }
 
 .search {
   position: absolute;
@@ -416,30 +446,32 @@ nav[role=navigation] {
   text-align: center;
   padding: 25px 0;
   z-index: 3; }
-  nav[role=navigation] a {
+  nav[role=navigation] li {
     display: inline-block;
     position: relative;
-    font-family: "franklin-gothic-urw", sans-serif;
     font-size: 1em;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin: 0 15px;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out; }
-    nav[role=navigation] a:hover, nav[role=navigation] a:focus {
-      color: #737373; }
-  nav[role=navigation] a:after {
+    margin: 0 15px; }
+    nav[role=navigation] li a {
+      font-family: "franklin-gothic-urw", sans-serif;
+      font-size: 1em;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      -webkit-transition: 0.2s ease-in-out;
+      -moz-transition: 0.2s ease-in-out;
+      -o-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out; }
+      nav[role=navigation] li a:hover, nav[role=navigation] li a:focus {
+        color: #737373; }
+  nav[role=navigation] li:after {
     content: '';
     height: 100%;
     position: absolute;
     right: -16px;
     border-right: 1px solid #515151; }
-  nav[role=navigation] a:last-child:after {
+  nav[role=navigation] li:last-child:after {
     content: '';
     border-right: 0; }
 
@@ -474,6 +506,25 @@ nav[role=navigation] {
   @media screen and (max-width: 1180px) {
     .hero {
       position: relative; } }
+
+.hero--page {
+  height: 280px;
+  background-image: url(../img/page-bg.jpg);
+  background-size: cover; }
+  .hero--page h1 {
+    position: relative;
+    top: 50%;
+    display: block;
+    width: 480px;
+    margin: -50px auto;
+    font-family: "minion-pro", serif;
+    font-size: 3.75em;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    background-color: #252525;
+    padding: 0px 40px 10px; }
 
 .hero__slider img {
   width: 100%; }
@@ -585,6 +636,63 @@ footer[role=contentinfo] {
   .search-links a {
     color: #252525;
     text-decoration: none; }
+
+.list ul {
+  display: block;
+  margin-bottom: 40px; }
+
+.intro__main {
+  padding: 0 2.5% 0 0; }
+  .intro__main blockquote {
+    margin: 40px 0 40px -50px; }
+  .intro__main figure {
+    margin: 20px 0; }
+    .intro__main figure img {
+      width: 48.75%; }
+      .intro__main figure img:nth-child(n) {
+        margin-bottom: 2.5%;
+        margin-right: 2.5%; }
+      .intro__main figure img:nth-of-type(2n) {
+        margin-right: 0; }
+      .intro__main figure img:last-child {
+        margin-right: 0; }
+
+.client__types {
+  background-color: #252525; }
+  .client__types h3,
+  .client__types p {
+    color: #fff; }
+  .client__types h3 {
+    font-style: italic;
+    font-size: 1.375em;
+    margin-bottom: 5px; }
+  .client__types p {
+    font-family: "franklin-gothic-urw", sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+
+.workshop__info {
+  padding: 0 2.5% 0 0; }
+  .workshop__info > p {
+    margin-bottom: 20px; }
+  .workshop__info div {
+    margin-top: 60px; }
+
+.packages {
+  background-color: #eeeeee; }
+
+.package {
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  margin-bottom: 20px; }
+  .package h3 {
+    font-size: 1.75em;
+    margin-bottom: 20px; }
+  .package .button {
+    margin-top: 20px; }
 
 /*!////////////////////////////////////////////////
 // STATES

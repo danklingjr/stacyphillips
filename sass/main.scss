@@ -11,6 +11,7 @@ header[role=banner]{
 	height: 223px;
 	position: relative;
 	padding: 45px 0 0;
+	z-index: 4;
 }
 .search{
 	position: absolute;
@@ -31,31 +32,35 @@ nav[role=navigation]{
 	text-align: center;
 	padding: 25px 0;
 	z-index: 3;
-	a{
+	li{
 		display: inline-block;
 		position: relative;
-		font-family: $headline;
-		font-size: em(16px,$font-size);
-		font-weight: 700;
-		letter-spacing: 0.2em;
-		color: #fff;
-		text-transform: uppercase;
-		text-decoration: none;
+		font-size: 1em;
 		margin: 0 15px;
-		@include prefix(transition, 0.2s ease-in-out);
-		&:hover,
-		&:focus{
-			color: $secondaryColor;
+		a{
+			font-family: $headline;
+			font-size: em(16px,$font-size);
+			font-weight: 700;
+			letter-spacing: 0.2em;
+			color: #fff;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			@include prefix(transition, 0.2s ease-in-out);
+			&:hover,
+			&:focus{
+				color: $secondaryColor;
+			}
 		}
 	}
-	a:after{
+	li:after{
 		content:'';
 		height: 100%;
 		position: absolute;
 		right: -16px;
 		border-right: 1px solid #515151;
 	}
-	a:last-child:after{
+	li:last-child:after{
 		content: '';
 		border-right: 0;
 	}
@@ -94,6 +99,26 @@ nav[role=navigation]{
 	}
 	@media screen and (max-width: 1180px){
 		position: relative;
+	}
+}
+.hero--page{
+	height: 280px;
+	background-image: url(../img/page-bg.jpg);
+	background-size: cover;
+	h1{
+		position: relative;
+		top: 50%;
+		display: block;
+		width: 480px;
+		margin: -50px auto;
+		font-family: $body;
+		font-size: em(60px,$font-size);
+		font-style: italic;
+		font-weight: 400;
+		color: #fff;
+		text-align: center;
+		background-color: $darkColor;
+		padding: 0px 40px 10px;
 	}
 }
 .hero__slider{
@@ -218,6 +243,66 @@ footer[role=contentinfo]{
 	a{
 		color: #252525;
 		text-decoration: none;
+	}
+}
+.list ul{
+	display: block;
+	margin-bottom: 40px;
+}
+.intro__main{
+	padding: 0 2.5% 0 0;
+	blockquote{
+		margin: 40px 0 40px -50px;
+	}
+	figure{
+		margin: 20px 0;
+		img{
+			@include gridRow(2, 2.5%);
+		}
+	}
+}
+.client__types{
+	background-color: $darkColor;
+	h3,
+	p{
+		color: #fff;
+	}
+	h3{
+		font-style: italic;
+		font-size: em(22px,$font-size);
+		margin-bottom: 5px;
+	}
+	p{
+		font-family: $headline;
+		font-size: em(20px,$font-size);
+		font-weight: 700;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+}
+.workshop__info{
+	padding: 0 2.5% 0 0;
+	> p{
+		margin-bottom: 20px;
+	}
+	div{
+		margin-top: 60px;
+	}
+}
+.packages{
+	background-color: #eeeeee;
+}
+.package{
+	background-color: #fff;
+	padding: 20px 30px 30px;
+	margin-bottom: 20px;
+	h3{
+		font-size: em(28px, $font-size);
+		margin-bottom: 20px;
+	}
+	.button{
+		margin-top: 20px;
 	}
 }
 
