@@ -1,0 +1,70 @@
+/*!////////////////////////////////////////////////
+// THEME
+/////////////////////////////////////////////////*/
+$font-size: 16px;
+@function em($px, $base: $base-font-size){
+	@return ($px / $base) * 1em;
+}
+
+$highlight: #cc47ab;
+$secondaryColor: #737373;
+$darkColor: #252525;
+
+$headline: "franklin-gothic-urw",sans-serif;
+$body: "minion-pro",serif;
+$logo: "kepler-std-semicondensed", serif;
+
+h1,h2{
+	font-family: $headline;
+	font-size: 700;
+}
+h3,h4{
+	font-family: $body;
+	font-size: em(20px,$font-size);
+}
+p,
+li,
+blockquote{
+	font-family: $body;
+	font-size: em(20px,$font-size);
+	line-height: 1.6em;
+}
+ul{
+	margin-left: 25px;
+}
+blockquote{
+	font-size: em(32px,$font-size);
+	font-weight: 700;
+	line-height: 1.2em;
+}
+
+.button{
+	position: relative;
+	display: inline-block;
+	background-color: #252525;
+	font-family: $headline;
+	font-size: em(16px,$font-size);
+	letter-spacing: 0.2em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 30px;
+	border: 3px solid $darkColor;
+	@include prefix(transition, 0.2s ease-in-out);
+	&:hover,
+	&:focus{
+		background-color: #fff;
+		color: $darkColor;
+	}
+
+}
+.content{
+	padding: 100px 10%;
+	h2{
+		font-size: em(32px,$font-size);
+		letter-spacing: 0.25em;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+}

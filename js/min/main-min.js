@@ -1,0 +1,1 @@
+$(".flexslider-1").flexslider({controlNav:!1,directionNav:!1,animation:"fade",animationLoop:!0,reverse:!1,direction:"vertical",randomize:!0}),$(".flexslider-2").flexslider({controlNav:!1,directionNav:!1,animation:"fade",animationLoop:!0,reverse:!0,direction:"vertical",initDelay:800,randomize:!0}),$(document).ready(function(){var e=new Masonry(".portfolio",{})});
