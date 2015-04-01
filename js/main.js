@@ -1,4 +1,4 @@
-$(".nav").stickyPanel();
+// $(".nav").stickyPanel();
 $('.flexslider-1').flexslider({
 	controlNav: false,
 	directionNav: false,
@@ -16,5 +16,12 @@ $('.flexslider-2').flexslider({
 	reverse: true,
 	direction: "vertical",
 	initDelay: 800,
-	randomize: true, 
+	randomize: true
+});
+
+
+$(document).ready(function() {
+	var msnry = new Masonry( '.portfolio', {
+	  // options
+	});
 });
